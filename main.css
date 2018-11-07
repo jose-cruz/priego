@@ -1,0 +1,511 @@
+@font-face {
+    font-family: montserrat-bold;
+    src: url("fonts/Montserrat-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: montserrat-extrabold;
+    src: url("fonts/Montserrat-ExtraBold.otf") format("opentype");
+}
+@font-face {
+    font-family: montserrat-light;
+    src: url("fonts/Montserrat-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: montserrat-medium;
+    src: url("fonts/Montserrat-Medium.otf") format("opentype");
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    height: 100%;
+}
+
+.home-container{
+    height: 340vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content min-content;
+}
+
+.home-element{
+    height: 100vh;
+}
+
+.about-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 40% 60%;
+}
+.about-container > .columna-1{
+    background: url('AboutMe/perfil.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    background-color: black;
+    background-position: center 35vh;
+}
+.about-container > .columna-2{
+    background: yellow;
+    display: grid;
+    grid-template-columns: 61%;
+    grid-template-rows: 18vh min-content min-content min-content;
+    grid-template-areas: "." "title" "text" "but";
+    grid-row-gap: 20px;
+    align-content: center;
+    justify-content: center;position: relative;
+}
+.about-container > .columna-1 > h1{
+    writing-mode: vertical-rl;
+    bottom: -11.5px;
+    right: 0;
+    margin: 0;
+    line-height: 103px;
+    position: absolute;
+    color: yellow;
+    font-size: 19vh;
+    transform: rotate(-180deg);
+    font-family: montserrat-extrabold;
+}
+.about-container > .columna-2 > h2{
+    font-family: montserrat-extrabold;
+    grid-area: title;
+    font-size: 45px;
+    margin: 0
+}
+.about-container > .columna-2 > p{
+    font-family: montserrat-medium;
+    grid-area: text;
+    font-size: 16px;
+}
+.about-container > .columna-2 > button{
+    font-family: montserrat-bold;
+    grid-area: but;
+    justify-self: start;
+    height: 45px;
+    width: 150px;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.about-container > .columna-2 > img{
+    position: absolute;
+    width: 34px;
+    top: 25px;
+    right: 25px;
+}
+
+
+.galery-main-projects{
+    background: white;
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: min-content auto;
+    grid-template-areas: "title" "project";
+    justify-content: center;
+    position: relative;
+    grid-row-gap: 60px;
+    align-content: center;
+}
+.galery-main-projects > h1{
+    font-family: montserrat-extrabold;
+    grid-area: title;
+    font-size: 45px;
+    margin: 0;
+}
+.galery-main-projects > .galery-slider {
+    grid-area: project;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+.galery-main-projects > .galery-slider > div{
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    min-height: 60vh;
+}
+.galery-main-projects > .galery-slider > #project-1{
+    width: 100%;
+}
+.galery-main-projects > .galery-slider > #project-2{
+    width: 100%;
+}
+.galery-main-projects > .galery-slider > #project-3{
+    width: 100%;
+}
+.galery-main-projects > .galery-slider > .show{
+    display: grid;
+}
+.galery-main-projects > .galery-slider > .hide{
+    display: none;
+}
+#project-1 > .columna-1{
+    background: url('portafolio/walking\ dead/walkingdead.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#project-2 > .columna-1{
+    background: url('portafolio/aficheindie/indie.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#project-3 > .columna-1{
+    background: url('portafolio/hatsu/graffiti.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.galery-main-projects > .galery-slider > div > .columna-2 {
+    display: grid;
+    grid-template-columns: 85%;
+    grid-template-rows: min-content min-content min-content;
+    justify-content: center;
+    align-content: center;
+    grid-row-gap: 30px;
+}
+.galery-main-projects > .galery-slider > div > .columna-2 > h2{
+    font-family: montserrat-extrabold;
+    margin: 0;
+    font-size: 34px;
+}
+.galery-main-projects > .galery-slider > div > .columna-2 > p{
+    font-family: montserrat-medium;
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+.galery-main-projects > .galery-slider > div > .columna-2 > button{
+    font-family: montserrat-bold;
+    background: none;
+    border: 1px solid black;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.galery-helper{
+    position: absolute;
+    bottom: 50px;
+    left: 30vw;
+    right: 30vw;
+    height: 10px;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content min-content;
+    grid-column-gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.galery-helper > div{
+    height: 5px;
+    width: 60px;
+}
+.galery-helper > .hide{
+    background: gray;
+}
+.galery-helper > .show{
+    background: black;
+}
+.galery-arrow{
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+}
+.galery-arrow:hover{
+    transform: scale(1.2);
+}
+.arrow-left{
+    left: 10px;
+}
+.arrow-right{
+    right: 10px;
+}
+
+.galery-rest-projects{
+    background: black;
+    display: grid;
+    padding: 9vw;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+    grid-template-rows: min-content min-content;
+    align-content: center;
+}
+.galery-rest-projects > h2{
+    margin: 0;
+    font-size: 45px;
+    font-family: montserrat-extrabold;
+    color: yellow;
+    margin-top: 30px;
+}
+.galery-rest-projects > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 15px;
+    min-height: 68vh;
+}
+.galery-rest-projects > div > .top-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 6fr 9fr 5fr;
+    grid-column-gap: 15px;
+}
+.galery-rest-projects > div > .mid-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 9fr 5fr 6fr;
+    grid-column-gap: 15px;
+}
+.galery-rest-projects > div > .bot-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5fr 12fr;
+    grid-column-gap: 15px;
+}
+.galery-rest-projects > div > div > div{
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+.galery-rest-projects > div > div > div > div{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+}
+.galery-rest-projects > div > div > div > div:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.galery-rest-projects > div > div > div > div > h3{
+    font-family: montserrat-bold;
+    font-size: 22px;
+    margin: 0;
+}
+.galery-rest-projects > div > div > div > div > p{
+    font-family: montserrat-medium;
+    font-size: 12px;
+    margin: 0;
+}
+
+#project-4{
+    background: url("MAS_PROYECTOS/halloween/MONTAJEDOS.jpg");
+}
+#project-5{
+    background: url("MAS_PROYECTOS/elprincipito/libro.jpg");
+}
+#project-6{
+    background: url("MAS_PROYECTOS/luau/DSC_0059.jpg");
+}
+#project-7{
+    background: url("MAS_PROYECTOS/alchile/shoppingbag.jpg");
+}
+#project-8{
+    background: url("MAS_PROYECTOS/mario/marioafiche.jpg");
+}
+#project-9{
+    background: url("MAS_PROYECTOS/periodico/periodico2.jpg");
+}
+#project-10{
+    background: url("MAS_PROYECTOS/invitacion/invitacion.jpg");
+}
+#project-11{
+    background: url("MAS_PROYECTOS/branding/Branding.jpg");
+}
+
+.footer{
+    background: yellow;
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: min-content min-content;
+    justify-content: center;
+    align-content: center;
+    grid-row-gap: 30px;
+    padding: 30px;
+}
+.footer > img{
+    width: 300px;
+}
+.footer > .buttons{
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-column-gap: 30px;
+}
+.footer > .buttons > a{
+    font-family: montserrat-medium;
+    text-decoration: none;
+    color: black;
+}
+.footer > .buttons > a:hover{
+    transform: scale(1.2);
+}
+
+#menu-holder{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    z-index: 2;
+}
+#menu-holder.show-menu{
+    display: grid;
+    grid-template-columns: max-content min-content max-content;
+    grid-template-rows: 60vh;
+    grid-column-gap: 60px;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+}
+#menu-holder > .close-menu{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+}
+#menu-holder > .columna-1{
+    min-width: 35vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+    grid-row-gap: 20px;
+    align-content: center;
+}
+#menu-holder > .columna-2{
+    min-width: 35vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-row-gap: 15px;
+    align-content: center;
+}
+#menu-holder > .divisor{
+    width: 0;
+    border: 1.5px solid white;
+}
+#menu-holder > .columna-1 > a{
+    font-family: montserrat-extrabold;
+    text-decoration: none;
+    font-size: 45px;
+    color: yellow;
+}
+#menu-holder > .columna-1 > a:hover{
+    color: white;
+}
+#menu-holder > .columna-2 > h1{
+    font-family: montserrat-extrabold;
+    margin: 0;
+    font-size: 45px;
+    color: yellow;
+}
+#menu-holder > .columna-2 > p{
+    font-family: montserrat-medium;
+    margin: 0;
+    color: white;
+}
+#menu-holder > .columna-2 > .social{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: min-content min-content min-content;
+    grid-column-gap: 15px;
+}
+#menu-holder > .columna-2 > .social > div > img{
+    width: 60px;
+}
+#menu-holder > .columna-2 > .social > div > .normal{
+    display: block;
+}
+#menu-holder > .columna-2 > .social > div > .hover{
+    display: none;
+}
+#menu-holder > .columna-2 > .social > div:hover > .normal{
+    display: none;
+}
+#menu-holder > .columna-2 > .social > div:hover > .hover{
+    display: block;
+}
+
+
+#project-holder{
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    z-index: 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main";
+}
+#project-holder > .close-project{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+}
+.proj-4, .proj-5, .proj-6, .proj-7, .proj-8, .proj-9, .proj-10, .proj-11{
+    display: grid !important;
+}
+#project-holder > .project-view{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#project-holder > .project-view > .columna-1{
+    background: black;
+    display: grid;
+}
+#project-holder > .project-view > .columna-2{
+    background: yellow;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: 1fr;
+    padding: 0 10%;
+    grid-row-gap: 20px;
+    align-content: center;
+}
+.proj-4 > .p4, .proj-5 > .p5, .proj-6 > .p6, .proj-7 > .p7, .proj-8 > .p8, .proj-9 > .p9, .proj-10 > .p10, .proj-11 > .p11{
+    display: grid !important;
+    grid-area: main;
+}
+#project-holder > .project-view > .columna-1 > img{
+    width: 70%;
+    justify-self: end;
+    align-self: center;
+    padding-right: 10%;
+}
+#project-holder > .project-view > .columna-2 > h2{
+    font-family: montserrat-extrabold;
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+}
+#project-holder > .project-view > .columna-2 > p{
+    font-family: montserrat-medium;
+    margin: 0;
+    font-size: 12px;
+    padding-right: 25%;
+}
+#project-holder > .project-view > .columna-2 > button{
+    font-family: montserrat-bold;
+    justify-self: start;
+    height: 45px;
+    width: 150px;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
