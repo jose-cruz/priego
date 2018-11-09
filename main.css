@@ -21,6 +21,14 @@ html, body{
     padding: 0;
 }
 
+button > a{
+    text-decoration: none;
+    color: black;
+}
+button:hover > a{
+    text-decoration: underline;
+}
+
 .main-container{
     height: 100%;
 }
@@ -45,12 +53,12 @@ html, body{
     background: url('AboutMe/perfil.jpg');
     background-repeat: no-repeat;
     position: relative;
-    background-size: contain;
+    background-size: cover;
     background-color: black;
-    background-position: center 35vh;
+    background-position: center 21vh;
 }
 .about-container > .columna-2{
-    background: yellow;
+    background: #f8e066;
     display: grid;
     grid-template-columns: 61%;
     grid-template-rows: 18vh min-content min-content min-content;
@@ -61,13 +69,13 @@ html, body{
 }
 .about-container > .columna-1 > h1{
     writing-mode: vertical-rl;
-    bottom: -11.5px;
-    right: 0;
+    bottom: -16px;
+    right: 12px;
     margin: 0;
     line-height: 103px;
     position: absolute;
-    color: yellow;
-    font-size: 19vh;
+    color: #f8e066;
+    font-size: 18vw;
     transform: rotate(-180deg);
     font-family: montserrat-extrabold;
 }
@@ -93,10 +101,12 @@ html, body{
     cursor: pointer;
 }
 .about-container > .columna-2 > img{
-    position: absolute;
+    position: fixed;
     width: 34px;
     top: 25px;
     right: 25px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 
@@ -193,7 +203,7 @@ html, body{
     bottom: 50px;
     left: 30vw;
     right: 30vw;
-    height: 10px;
+    height: 20px;
     display: grid;
     grid-template-rows: min-content;
     grid-template-columns: min-content min-content min-content;
@@ -202,8 +212,9 @@ html, body{
     align-content: center;
 }
 .galery-helper > div{
-    height: 5px;
+    height: 10px;
     width: 60px;
+    cursor: pointer;
 }
 .galery-helper > .hide{
     background: gray;
@@ -230,18 +241,17 @@ html, body{
 .galery-rest-projects{
     background: black;
     display: grid;
-    padding: 9vw;
+    padding: 30px 50px;
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
-    grid-template-rows: min-content min-content;
+    grid-template-rows: min-content auto;
     align-content: center;
 }
 .galery-rest-projects > h2{
     margin: 0;
     font-size: 45px;
     font-family: montserrat-extrabold;
-    color: yellow;
-    margin-top: 30px;
+    color: #f8e066;
 }
 .galery-rest-projects > div{
     display: grid;
@@ -280,23 +290,31 @@ html, body{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 10px;
     cursor: pointer;
 }
 .galery-rest-projects > div > div > div > div:hover{
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(150, 150, 150, 0.8);
 }
 .galery-rest-projects > div > div > div > div > h3{
     font-family: montserrat-bold;
     font-size: 22px;
     margin: 0;
+    display: none;
+    color: white;
 }
 .galery-rest-projects > div > div > div > div > p{
     font-family: montserrat-medium;
     font-size: 12px;
     margin: 0;
+    display: none;
+    color: white;
 }
+.galery-rest-projects>div>div>div>div:hover>h3, .galery-rest-projects>div>div>div>div:hover>p {
+    display: block;
+}
+
 
 #project-4{
     background: url("MAS_PROYECTOS/halloween/MONTAJEDOS.jpg");
@@ -324,7 +342,7 @@ html, body{
 }
 
 .footer{
-    background: yellow;
+    background: #f8e066;
     display: grid;
     grid-template-columns: min-content;
     grid-template-rows: min-content min-content;
@@ -358,7 +376,7 @@ html, body{
     left: 0;
     right: 0;
     background: black;
-    z-index: 2;
+    z-index: 3;
 }
 #menu-holder.show-menu{
     display: grid;
@@ -399,7 +417,7 @@ html, body{
     font-family: montserrat-extrabold;
     text-decoration: none;
     font-size: 45px;
-    color: yellow;
+    color: #f8e066;
 }
 #menu-holder > .columna-1 > a:hover{
     color: white;
@@ -408,7 +426,7 @@ html, body{
     font-family: montserrat-extrabold;
     margin: 0;
     font-size: 45px;
-    color: yellow;
+    color: #f8e066;
 }
 #menu-holder > .columna-2 > p{
     font-family: montserrat-medium;
@@ -468,9 +486,10 @@ html, body{
 #project-holder > .project-view > .columna-1{
     background: black;
     display: grid;
+    position: relative;
 }
 #project-holder > .project-view > .columna-2{
-    background: yellow;
+    background: #f8e066;
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: 1fr;
@@ -482,11 +501,34 @@ html, body{
     display: grid !important;
     grid-area: main;
 }
-#project-holder > .project-view > .columna-1 > img{
+#project-holder>.project-view>.columna-1 > div{
     width: 70%;
-    justify-self: end;
+    justify-self: center;
     align-self: center;
-    padding-right: 10%;
+}
+#project-holder > .project-view > .columna-1 > div > img{
+    width: 100%;
+}
+#project-holder > .project-view > .columna-1 > div > .hide{
+    display: none;
+}
+#project-holder > .project-view > .columna-1 > div > .show{
+    display: block;
+}
+#project-holder > .project-view > .columna-1 > img{
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+#project-holder>.project-view>.columna-1>img:hover {
+    transform: scale(1.2);
+}
+#project-holder > .project-view > .columna-1 > .left-arrow{
+    left: 10px;
+}
+#project-holder > .project-view > .columna-1 > .right-arrow{
+    right: 10px;
 }
 #project-holder > .project-view > .columna-2 > h2{
     font-family: montserrat-extrabold;
